@@ -67,14 +67,19 @@ void aux_tree_print( tree_t* root, int spaces){
         fprintf(stderr, " ");
     }
 
-
     switch(root->type){
         case '+':
             fprintf(stderr, "[ADDOP]\n");
             break;
+        case '-':
+            fprintf(stderr, "[SUBOP]\n");
+            break;    
         case '*':
             fprintf(stderr, "[MULOP]\n");
             break;
+        case '/':
+            fprintf(stderr, "[DIVOP]\n");
+            break;    
         case NUM:
             fprintf(stderr, "[NUM:%d]\n", root->attribute);
             break;
